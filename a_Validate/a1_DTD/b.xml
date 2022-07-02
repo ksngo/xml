@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE name SYSTEM "b.dtd" []>
+<name>
+ <first>Joseph</first>
+ <middle>John</middle>
+ <last>Fawcett</last>
+</name>
+
+<!-- external subset b.dtd(document type definition) -->
+<!-- system identifiers -->

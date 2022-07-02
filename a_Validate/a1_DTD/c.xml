@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE name PUBLIC "-//Owner//Class Description//Language//Version"  "b.dtd" []>
+<name>
+ <first>Joseph</first>
+ <middle>John</middle>
+ <last>Fawcett</last>
+</name>
+
+<!-- external subset b.dtd(document type definition) -->
+<!-- public identifiers -->
+<!-- optionally uses b.dtd when public identifier is not available -->

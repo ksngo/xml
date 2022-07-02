@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE name [
+    <!ELEMENT name (first, middle, last, description, break, descriptions)>
+    <!ELEMENT first (#PCDATA)>
+    <!ATTLIST first attOne CDATA #REQUIRED>
+    <!ELEMENT middle (#PCDATA)>
+    <!ATTLIST middle attOne CDATA #IMPLIED>
+    <!ELEMENT last (#PCDATA)>
+    <!ELEMENT description (#PCDATA |title | detail)*>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT detail (#PCDATA)>
+    <!ELEMENT break EMPTY>
+    <!ELEMENT descriptions ANY>
+    <!ELEMENT Rogue (#PCDATA)>
+    <!ELEMENT StarWars (#PCDATA)>
+]>
+<name>
+    <first attOne="something">Joseph</first>
+    <middle>John</middle>
+    <last>Fawcett</last>
+    <description>
+        Joe is a developer and author for
+        <title>Beginning XML</title>
+        , now in its
+        <detail>5th Edition</detail>
+    </description>
+    <break/>
+    <descriptions>
+        <Rogue>roger</Rogue>
+        <StarWars>star</StarWars>
+    </descriptions>
+</name>
+<!-- internal subset -->
+<!-- #PCDATA is parsed character data, character data within should be parsed by parser -->
+<!-- !ELEMENT (ELEMENT DECLARATIONS) -->
+<!-- description is MIXED CONTENT(have elements and text) -->
+<!-- first is also Mixed content(text only) -->
+<!-- break is EMPTY CONTENT -->
+<!-- * is cardinality indicator for (appear 0 or more) -->
+<!-- ? is cardinality indicator for (appear 0 or 1) -->
+<!-- + is cardinality indicator for (appear 1 or more) -->
+
+<!--!ATTLIST for ATTRIBUTE declarations -->
+<!-- <!ATTLIST first attOne CDATA #REQUIRED> , first element with attribute attOne of character type and required, <first attOne="musthave"> -->
+<!-- <!ATTLIST middle attOne CDATA #IMPLIED> , middle element with attribute attOne of character type and attribute can have no default value, <middle>-->
+<!-- <!ATTLIST contacts version CDATA #FIXED “1.0”> , contacts element with version attribute of char type that is fixed as 1.0, <contacts version="1.0"> -->
+
+<!-- !ENTITY for entity declaration -->
+<!-- e.g. &amp; as (1)character entity -->
+<!-- (2)general entity, <!ENTITY general-entity "this is general entity">  , &general-entity; -->
+<!-- <!ENTITY general-entity SYSTEM/PUBLIC "entity.txt">  ,  refer to external files -->
+<!-- (3) parameter entiry, <!ENTITY % param-entity "this is parameter entity", only used in DTD(<!DOCTYPE >) , %param-entity;-->

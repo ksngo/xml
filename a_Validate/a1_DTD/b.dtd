@@ -1,0 +1,4 @@
+<!ELEMENT name (first, middle, last)>
+  <!ELEMENT first (#PCDATA)>
+ <!ELEMENT middle (#PCDATA)>
+ <!ELEMENT last (#PCDATA)>
