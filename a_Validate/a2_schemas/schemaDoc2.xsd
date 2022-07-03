@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        xmlns:target="http://www.example.com/name" 
+        targetNamespace="http://www.example.com/name" 
+        elementFormDefault="qualified">
+    <complexType name="NameType">
+        <sequence>
+            <element name="first" type="string" />
+            <element name="middle" type="string" />
+            <element name="last" type="string" />
+        </sequence>
+        <attribute name="title" type="string" />
+    </complexType>
+    <element name="name" type="target:NameType" />
+</schema>
+
+<!-- complexType and element 'name' are global -->
+<!-- create a name for complexType and to refer to it in element 'name' -->
+<!-- this is alternative to making element 'name' as global in schemaDoc.xsd -->

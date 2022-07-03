@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        xmlns:contacts="http://www.example.com/contacts" 
+        targetNamespace="http://www.example.com/contacts" 
+        elementFormDefault="qualified">
+    <element name="contacts">
+        <complexType>
+            <sequence>
+                <element name="contact" minOccurs="0" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <!--  NameType is created below globally-->
+                            <element name="name" type="contacts:NameType" />
+                            <!--  LocationType is created below globally-->
+                            <element name="location" type="contacts:LocationType" />
+                            <element name="phone">
+                                <complexType>
+                                    <simpleContent>
+                                        <extension base="string">
+                                            <attribute name="kind" type="string" default="Home" />
+                                        </extension>
+                                    </simpleContent>
+                                </complexType>
+                            </element>
+                            <!-- KnowsType is created below globally -->
+                            <element name="knows" type="contacts:KnowsType" />
+                            <!-- DescriptionType is created below globally -->
+                            <element name="description" type="contacts:DescriptionType" />
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+            <attributeGroup ref="contacts:ContactAttributes" />
+        </complexType>
+    </element>
+    <attributeGroup name="ContactAttributes">
+        <attribute name="version" type="string" fixed="1.0" />
+        <attribute name="source" type="string" />
+    </attributeGroup>
+
+    <attribute name="title" type="string" />
+    <!--  NameType created here-->
+    <complexType name="NameType">
+        <group ref="contacts:NameGroup" />
+    </complexType>
+    <group name="NameGroup">
+        <sequence>
+            <element name="first" type="string" minOccurs="1" maxOccurs="unbounded" />
+            <element name="middle" type="string" minOccurs="0" maxOccurs="1" />
+            <element name="last" type="string" />
+        </sequence>
+    </group>
+    <!--  LocationType created here-->
+    <complexType name="LocationType">
+        <choice minOccurs="0" maxOccurs="unbounded">
+            <element name="address" type="string" />
+            <sequence>
+                <element name="latitude" type="string" />
+                <element name="longitude" type="string" />
+            </sequence>
+        </choice>
+    </complexType>
+    <!-- KnowsType created here -->
+    <complexType name="KnowsType"></complexType>
+    <!-- DescriptionType created here -->
+    <complexType name="DescriptionType" mixed="true">
+        <choice minOccurs="0" maxOccurs="unbounded">
+            <element name="em" type="string" />
+            <element name="strong" type="string" />
+            <element name="br" type="string" />
+        </choice>
+    </complexType>
+</schema>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        xmlns:target="http://www.example.com/name" 
+        targetNamespace="http://www.example.com/name" 
+        elementFormDefault="qualified">
+    <element name="name">
+        <complexType>
+            <sequence>
+                <element name="first" type="string" />
+                <element name="middle" type="string" />
+                <element name="last" type="string" />
+            </sequence>
+            <attribute name="title" type="string" />
+        </complexType>
+    </element>
+</schema>
+
+<!-- schema element is root element in a XML schema. -->
+<!-- <schema> element is part of http://www.w3.org/2001/XMLSchema vocabulary -->
+<!-- the elementFormDefault set as default is trying to make the children elements(first,middle etc.) qualified together with the namespace of <name> element -->
+
+<!-- <complexType> refers to element 'name' because it contains other elements -->
+<!-- i think <sequence> specifies the order; <choice>==> only one element, <all>==> any order and 0 or more elements -->
+<!-- <attribute> pointing to element 'name' that it can have an attribute 'title'  -->
+
+<!-- xmlns:target ensures that element,complexType,sequence,attribute still referring to xmlns of 2001/XMLSchema  -->
+<!-- alternatively, <xs:schema xmlns:xs="2001/XMLSchema> <xs:element>" -->
+<!-- targetNamespace ==> works together with namespace-location pair in schemaLocation  -->
+
+<!-- Note: any element directly under <schema> element is a global declaration. The others not under <schema> are local. -->
+
+
+<!-- <choice minOccurs="0" maxOccurs="unbounded"> , 
+    cardinality, element appears how many times -->
+<!-- <element name="eleName" type="string" default="defaultText"/> , 
+    <eleName/> is <eleName>defaultText</eleName>  -->
+<!-- <element name="eleName" type="string" fixed="defaultText"/> , 
+    <eleName>wrong</eleName> will have validation error  -->
+<!-- <any namespace="##any or ##other or ##targetNamespace or ##local"> , 
+    any is wildcard element, 
+    namespace values defines elements from all/defined namespaces included as wildcard  -->
+<!-- <any processContents="lax or skip or strict"> , 
+    lax=> validates wildcard element if global XML schema definition is accessible, 
+    strict=>validates but raises error if global XML definition,
+    skip=>processir skips any wildcard elements in instance document -->
+<!-- <complexType mixed="true"> , include both text and element content  -->
+<!-- <group name="globalGroupName"> , reusable groups of elements -->

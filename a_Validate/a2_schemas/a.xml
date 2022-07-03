@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<name
+ xmlns="http://www.example.com/name"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.example.com/name schemaDoc.xsd"
+ title="Mr.">
+ <first>John</first>
+ <middle>Fitzgerald Johansen</middle>
+ <last>Doe</last>
+</name>
+
+<!-- instead of validation via DTD(doctype definition), validate with schema xsd -->
+<!-- xsi ==> xml schema instance -->
+<!-- xsd ==> xml schema document -->
+<!-- create xsi name space pointing to XMLSchema-instance, schemaLocation attribute is declared with namespace xsi.-->
+<!-- schemaLocation contains namespace-location pair -->
+<!-- namespace of document, location of xml schema -->
+<!-- use noNamespaceSchemaLocation attribute if XML Schema has no targetNamespace(<schema targetnamespace="http://www.example.com/name >" -->

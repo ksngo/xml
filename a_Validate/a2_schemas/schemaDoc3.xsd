@@ -1,0 +1,20 @@
+<?xml version= "1.0"?>
+<schema xmlns= "http://www.w3.org/2001/XMLSchema" 
+        xmlns:target= "http//www.example.com/name" 
+        targetNamespace= "http//www.example.com/name" 
+        elementFormDefault= "qualified">
+    <element name= "first" type= "string" />
+    <element name= "middle" type= "string" />
+    <element name= "last" type= "string" />
+    <complexType name= "NameType">
+        <sequence>
+            <element ref= "target:first" />
+            <element ref= "target:middle" />
+            <element ref= "target:last" />
+        </sequence>
+        <attribute name= "title" type= "string" />
+    </complexType>
+    <element name= "name" type= "target:NameType" />
+</schema>
+
+<!-- element(first,middle,last, name) are all global now. -->
