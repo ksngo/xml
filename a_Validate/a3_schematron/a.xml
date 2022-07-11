@@ -1,0 +1,63 @@
+<library
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="schemeWithSchematronRules.xsd"
+>
+<!-- xsi ==> xml schema instance -->
+<!-- create xsi name space pointing to XMLSchema-instance, noNamespaceSchemaLocation attribute is declared with namespace xsi.-->
+<!-- schemaLocation contains namespace-location pair -->
+<!-- use noNamespaceSchemaLocation attribute as schemeWithSchematronRules.xsd has no targetNamespace(<schema targetnamespace="http://www.example.com/name >" -->
+    <book id="ACMAS-20" publishedDate="1920" genre="Detective Fiction">
+        <title>The Mysterious Affair at Styles</title>
+        <authors count="1">
+            <author id="AC">Agatha Christie</author>
+        </authors>
+        <characters>
+            <character id="HP">
+                <name>Hercule Poirot</name>
+                <description>A former Belgian detective,
+     now a private investigator.</description>
+            </character>
+            <character id="JJ">
+                <name>James Japp</name>
+                <description>A detective from London’s
+     Scotland Yard.</description>
+            </character>
+            <character id="AH">
+                <name>Arthur Hastings</name>
+                <description>The narrator of the tale
+     and an old friend of Poirot.</description>
+            </character>
+            <character id="AI">
+                <name>Alfred Inglethorpe</name>
+                <description>The new husband of Emily Cavendish,
+     who is disliked by her family.</description>
+            </character>
+        </characters>
+        <description>Emily Cavendish, a wealthy widow,
+     marries again to Alfred Inglethorp.
+     One night she is found poisoned and
+     Alfred immediately becomes the main suspect.</description>
+    </book>
+    <book id="EGOSC-77" publishedDate="1977" genre="Science Fiction">
+        <title>Ender’s Game</title>
+        <authors count="1">
+            <author id="OSC">Orson Scott Card</author>
+        </authors>
+        <characters>
+            <character id="AW">
+                <name>Andrew “Ender" Wiggin</name>
+                <description>A young boy
+ who is selected for Battle School following an incident
+ with a local bully.</description>
+            </character>
+            <character id="MR">
+                <name>Mazer Rackham</name>
+                <description>A hero from the earlier Formic wars.</description>
+            </character>
+        </characters>
+        <description>Earth is at war with an alien species known as Formics
+ which nearly succeeded in destroying the human race.
+ Ender is unwittingly thrust into combat against
+ them.</description>
+    </book>
+</library>

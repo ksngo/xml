@@ -1,0 +1,23 @@
+{
+  "name": "xml_repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksngo/xml.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksngo/xml/issues"
+  },
+  "homepage": "https://github.com/ksngo/xml#readme",
+  "dependencies": {
+    "xslt3": "^2.4.0"
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Months>
+    <Month index="1">January</Month>
+    <Month index="2">February</Month>
+    <Month index="3">March</Month>
+    <Month index="4">April</Month>
+    <Month index="5">May</Month>
+    <Month index="6">June</Month>
+    <Month index="7">July</Month>
+    <Month index="8">August</Month>
+    <Month index="9">September</Month>
+    <Month index="10">October</Month>
+    <Month index="11">November</Month>
+    <Month index="12">December</Month>
+</Months>

@@ -1,0 +1,17 @@
+<employees>
+    <employee firstName="Joe" lastName="Fawcett" jobTitle="Developer" department="IT" />
+    <employee firstName="Max" lastName="Bialystock" jobTitle="CEO" department="Management" />
+    <employee firstName="Phineas" lastName="Barnum" jobTitle="Head of Sales" department="Sales and Marketing" />
+    <employee firstName="Leo" lastName="Bloom" jobTitle="Auditor" department="Accounts" />
+    <employee firstName="Danny" lastName="Ayers" jobTitle="Developer" department="IT" />
+    <employee firstName="Carmen" lastName="Ghia" jobTitle="PA to the VP of Products" department="Management" />
+    <employee firstName="Ulla" lastName="Anderson" jobTitle="Head of Promotions" department="Sales and Marketing" />
+    <employee firstName="Grace" lastName="Hopper" jobTitle="Developer" department="IT" />
+    <employee firstName="Bob" lastName="Cratchit" jobTitle="Bookkeeper" department="Accounts" />
+    <employee firstName="Charles" lastName="Babbage" jobTitle="Head of Infrastructure" department="IT" />
+    <employee firstName="Roger" lastName="De Bris" jobTitle="VP of Products" department="Management" />
+    <employee firstName="Willy" lastName="Loman" jobTitle="Salesman" department="Sales and Marketing" />
+    <employee firstName="Franz" lastName="Liebkind" jobTitle="Developer" department="IT" />
+    <employee firstName="Luca" lastName="Pacioli" jobTitle="Accountant" department="Accounts" />
+    <employee firstName="Lorenzo" lastName="St. DuBois" jobTitle="Project Manager" department="IT" />
+</employees>

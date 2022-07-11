@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:sch="http://www.ascc.net/xml/schematron" 
+    elementFormDefault="qualified">
+    <!-- schematron namespace sch -->
+    <xs:element name="library">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="book" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="book">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="title" />
+                <xs:element ref="authors" />
+                <xs:element ref="characters" />
+                <xs:element ref="description" />
+            </xs:sequence>
+            <xs:attribute name="genre" use="required" />
+            <xs:attribute name="id" use="required" type="xs:token" />
+            <xs:attribute name="publishedDate" use="required" type="xs:gYear" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="title" type="xs:string" />
+    <xs:element name="authors">
+        <!-- embed schematron patterns inside XML Schema annotation and appinfo -->
+        <xs:annotation>
+            <xs:appinfo>
+                <!-- start of schematron patterns -->
+                <sch:pattern id="authors">
+                    <!-- the rule context refers to the Xpath so when it encounters <authors>, the rule shall be tested -->
+                    <sch:rule context="authors">
+                        <!-- testing attribute count for <authors> to be equal number of <author>-->
+                        <sch:assert test="@count = count(author)">
+     The count attribute must equal the number of author elements.</sch:assert>
+                    </sch:rule>
+                </sch:pattern>
+                <!-- end of schematron patterns -->
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="author" />
+            </xs:sequence>
+            <xs:attribute name="count" use="required" type="xs:integer" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="author">
+        <xs:complexType mixed="true">
+            <xs:attribute name="id" use="required" type="xs:token" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="characters">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="character" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="character">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="name" />
+                <xs:element ref="description" />
+            </xs:sequence>
+            <xs:attribute name="id" use="required" type="xs:token" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="name" type="xs:string" />
+    <xs:element name="description" type="xs:string" />
+</xs:schema>

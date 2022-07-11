@@ -1,0 +1,5 @@
+/a/b/c[@id="some"] => <c>
+
+<a><b><c id="some"></c></b></a>
+
+/a/b/c/@id =>some
