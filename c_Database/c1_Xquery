@@ -1,0 +1,3 @@
+/dictionary/entry[6] => xPath
+
+doc("dictionary.xml")/dictionary/entry[6] => xQuery

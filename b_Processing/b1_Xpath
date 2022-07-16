@@ -1,5 +1,5 @@
-/a/b/c[@id="some"] => <c>
 
 <a><b><c id="some"></c></b></a>
 
-/a/b/c/@id =>some
+/a/b/c[@id="some"] => points to <c>
+/a/b/c/@id => points to 'some'

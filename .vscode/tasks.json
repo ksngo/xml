@@ -12,8 +12,22 @@
 			},
 			"problemMatcher": [
 				"$saxon-xslt-js"
-			],
-			// "initialTemplate": "main", for a_v12
+			]
+		},
+		{
+			"label": "Run BaseX XQuery",
+			"type": "shell",
+			"command": "basex.bat -i '${workspaceFolder}/c_Database/input1.xml' -o '${workspaceFolder}/c_Database/${fileBasenameNoExtension}_output.xml' '${file}'",
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		}
 	]
 }
+// set isDefault to run which task when ctrl+shift+b
+// ${file} is current file
+// ${workspaceFolder} is xml_repo/
+// xslt-js from XSLT/XPATH extension to run saxon-xslt-js to process xslt files
+// basex.bat from basex.org window installation for run xquery
