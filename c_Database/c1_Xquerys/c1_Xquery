@@ -1,0 +1,11 @@
+/dictionary/entry[6] => xPath
+
+doc("dictionary.xml")/dictionary/entry[6] => xQuery
+
+FLWOR 
+
+for $dude in doc("file.xml")//entry
+let 
+where xs:integer($dude/@died) lt 1600
+Order by $dude/@died
+return $dude/title

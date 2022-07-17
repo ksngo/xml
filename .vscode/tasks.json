@@ -17,7 +17,7 @@
 		{
 			"label": "Run BaseX XQuery",
 			"type": "shell",
-			"command": "basex.bat -i '${workspaceFolder}/c_Database/input1.xml' -o '${workspaceFolder}/c_Database/${fileBasenameNoExtension}_output.xml' '${file}'",
+			"command": "basex.bat -i '${workspaceFolder}/c_Database/input2.xml' -o '${workspaceFolder}/c_Database/${fileBasenameNoExtension}_output.xml' '${file}'",
 			"problemMatcher": [],
 			"group": {
 				"kind": "build",
