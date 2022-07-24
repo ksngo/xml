@@ -1,4 +1,4 @@
-# MySQL
+# 1. MySQL
 
 - opensource has limited xml functions
 - store xml as string in mysql and parse using following function
@@ -13,9 +13,9 @@ WHERE PostId = 2
 - output mysql can be in xml using --xml option
 ``` mysql -u root -p --xml ```
 
-# microsoft SQL server
-## FOR XML instruction (returning XML from sql query)
-### FOR XML RAW
+# 2. microsoft SQL server
+## 2.1 FOR XML instruction (returning XML from sql query)
+### 2.1.1 FOR XML RAW
 ```sql
 SELECT [PurchaseOrderID],[RevisionNumber],[Status] 
 FROM [Purchasing].[PurchaseOrderHeader] 
@@ -111,7 +111,7 @@ FOR XML RAW('order'), ELEMENTS XSINIL, ROOT('orders'), XMLSCHEMA;
 </orders>
 ```
 
-### FOR XML AUTO
+### 2.1.2 FOR XML AUTO
 
 ```sql
 SELECT POH.[PurchaseOrderID],POH.[RevisionNumber],POH.[Status]
@@ -134,9 +134,9 @@ SELECT POH.[PurchaseOrderID],POH.[RevisionNumber],POH.[Status]
 </orders>
 ```
 
-### FOR XML EXPLICIT (recommend PATH)
+### 2.1.3 FOR XML EXPLICIT (recommend PATH)
 
-### FOR XML PATH
+### 2.1.4 FOR XML PATH
 ```sql
  SELECT [PurchaseOrderID] [@PurchaseOrderID]
  ,[Status] [@Status]
@@ -234,8 +234,8 @@ FOR XML PATH('order'), ROOT('orders');
 </orders>
 ```
 
-## storing XML within microsoft sql server table 
-### xml data type (ability for sql to store xml data type instead of plain strings)
+## 2.2 storing XML within microsoft sql server table 
+### 2.2.1 xml data type (ability for sql to store xml data type instead of plain strings)
 - in sql server, the XML data modification language(DML)
 - example with **modify()** method, (delete, insert, replace value of)
 - Note XQuery1.0 is limited to querying XML only. It cannot delete or insert.
@@ -285,7 +285,7 @@ SET @People =
 SELECT FirstName.value('text()[1]', 'nvarchar(100)') FirstName FROM @People.nodes('/*/person') Person(FirstName);
 ```
 
-### xml schema (specify schema alongside XML data type)
+### 2.2.2 xml schema (specify schema alongside XML data type)
 
 - advantage 1: schema allows validation check
 - advantage 2: queries against the XML will return type data specified from schema instead of generic text.
@@ -317,7 +317,7 @@ CREATE TABLE [dbo].[Docs](
  [XMLDoc] [xml] (EmployeesSchemaCollection))
 ```
 
-### specify namespaces in SQL Server
+### 2.2.3 specify namespaces in SQL Server
 
 - **WITH XMLNAMESPACES** statement
 
@@ -344,6 +344,6 @@ WITH XMLNAMESPACES (DEFAULT 'http://wrox.com/namespaces/examples')
 SELECT @NamespacedData.value((/data/item[@id = 2])[1]', 'nvarchar(10)') Item;
 ```
 
-# eXist XML database 
+# 3. eXist XML database 
 
 - designed from ground up to store and manage large numbers of XML
