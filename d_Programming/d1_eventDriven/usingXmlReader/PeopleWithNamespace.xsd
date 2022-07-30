@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://wrox.com/namespaces/BeginningXml/People" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="People">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="Person">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="Description" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="bornDate" type="xs:date" use="required" />
+            <xs:attribute name="diedDate" type="xs:date" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

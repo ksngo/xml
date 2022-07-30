@@ -1,0 +1,23 @@
+<People>
+  <Person bornDate="1874-11-30" diedDate="1965-01-24">
+    <Name>Winston Churchill</Name>
+    <Description>
+  Winston Churchill was a mid-20th century British politician who
+  became famous as Prime Minister during the Second World War.
+  </Description>
+  </Person>
+  <Person bornDate="1917-11-19" diedDate="1984-10-31">
+    <Name>Indira Gandhi</Name>
+    <Description>
+ Indira Gandhi was India's first female prime minister and was
+ assassinated in 1984.
+ </Description>
+  </Person>
+  <Person bornDate="1917-05-29" diedDate="1963-11-22">
+    <Name>John F. Kennedy</Name>
+    <Description>
+ JFK, as he was affectionately known, was a United States president
+ who was assassinated in Dallas, Texas.
+ </Description>
+  </Person>
+</People>
