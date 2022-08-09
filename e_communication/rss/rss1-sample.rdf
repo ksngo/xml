@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns="http://purl.org/rss/1.0/"
+	 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	 xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+<channel rdf:about="http://journal.dajobe.org/journal">
+	<title>Dave Beckett - Journalblog</title>
+	<link>http://journal.dajobe.org/journal</link>
+	<description>Hacking the semantic linked data web</description>
+	<dc:date>2011-08-15T20:15:08Z</dc:date>
+	<items>
+		<rdf:Seq>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2010/06/28/happy-10th-birthday-redland/"/>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2010/03/20/command-line-semantic-web-with-redland/"/>
+		</rdf:Seq>
+	</items>
+</channel>
+
+<item rdf:about="http://journal.dajobe.org/journal/posts/2010/06/28/happy-10th-birthday-redland/">
+	<title>Happy 10th Birthday Redland</title>
+	<link>http://journal.dajobe.org/journal/posts/2010/06/28/happy-10th-birthday-redland/</link>
+	 <dc:date>2010-06-28T16:03:54Z</dc:date>
+	<dc:creator>Dave Beckett</dc:creator>
+	<description>Redland&#8216;s 10th year source code commit birthday is today 28th Jun at 9:05am PST &#8211; the first commit was Wed Jun 28 17:04:57 2000 UTC. Happy 10th Birthday! Please celebrate with tea and cake.</description>
+
+	<content:encoded><![CDATA[<p><a href="http://librdf.org/">Redland</a>&#8216;s 10th year source code commit birthday is today 28th Jun at 9:05am PST &#8211; the <a href="http://git.librdf.org/view?p=librdf.git;a=commit;h=8df358fb2bc1f4a69de08bc3fb4ae7d784395521">first commit</a> was Wed Jun 28 17:04:57 2000 UTC.</p>
+
+<p>Happy 10th Birthday!  Please celebrate with tea and cake.</p>
+
+]]></content:encoded>
+
+	</item>
+
+</rdf:RDF>
