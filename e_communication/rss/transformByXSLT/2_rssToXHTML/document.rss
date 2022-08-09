@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:xhtml="http://www.w3.org/1999/xhtml" version="2.0">
+   <channel>
+      <description>This will not change</description>
+      <link>http://example.org</link>
+      <title>My Example Document</title>
+      <item>
+         <title>A first discussion point</title>
+         <description>Something related to the first point.</description>
+      </item>
+      <item>
+         <title>A second discussion point</title>
+         <description>Something related to the second point.</description>
+      </item>
+   </channel>
+</rss>
