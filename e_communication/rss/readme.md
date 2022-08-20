@@ -17,7 +17,7 @@ practices on the Web.
 - subscriber tool periodically poll the URL for latest published.
 
 ## Aggregator
-- Can use aggregator to use SAX (simple api for XML, java or other languages)to parse XML. An Aggregator polls different dees and merges the entries into a single displays
+- Can use aggregator to use SAX (simple api for XML, java or other languages)to parse XML. An Aggregator polls different feeds and merges the entries into a single displays
 
 ## transform RSS with XSLT
 - XSLT transformations can be used to convert between RSS and another format (XHTML)
