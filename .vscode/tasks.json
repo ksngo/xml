@@ -21,9 +21,35 @@
 			"problemMatcher": [],
 			"group": {
 				"kind": "build",
-				"isDefault": true
 			}
-		}
+		},
+		{
+			"type": "xslt-js",
+			"label": "xslt-js: Saxon-JS Transform (New)",
+			"xsltFile": "${file}",
+			"xmlSource": "${workspaceFolder}/e_communication/rss/transformByXSLT/1_xhtmlToRSS/document.html",
+			"resultPath": "${workspaceFolder}/e_communication/rss/transformByXSLT/1_xhtmlToRSS/result.rss",
+			"group": {
+				"kind": "build",
+			},
+			"problemMatcher": [
+				"$saxon-xslt-js"
+			]
+		},
+		{
+			"type": "xslt-js",
+			"label": "xslt-js: Saxon-JS Transform (New)",
+			"xsltFile": "${file}",
+			"xmlSource": "${workspaceFolder}/e_communication/rss/transformByXSLT/2_rssToXHTML/document.rss",
+			"resultPath": "${workspaceFolder}/e_communication/rss/transformByXSLT/2_rssToXHTML/result.html",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$saxon-xslt-js"
+			]
+		},
 	]
 }
 // set isDefault to run which task when ctrl+shift+b

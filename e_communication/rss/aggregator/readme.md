@@ -1,2 +1,0 @@
-- uses SAX (simple api for XML, java or other languages)to parse XML.
-- An Aggregator polls different dees and merges the entries into a single displays
