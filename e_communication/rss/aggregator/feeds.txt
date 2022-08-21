@@ -1,5 +1,0 @@
-http://www.fromoldbooks.org/rss.xml
-http://www.25hoursaday.com/weblog/SyndicationService.asmx/GetRss
-http://journal.dajobe.org/journal/index.rdf
-http://planetrdf.com/index.rdf
-
